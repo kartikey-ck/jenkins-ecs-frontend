@@ -13,7 +13,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    sh "docker run -d --rm --name frontend-test -p 30000:3000 ${env.FRONTEND_IMAGE} || echo 'Container may already be running'"
+                    sh "docker run -d --rm --name frontend-test -p 3000:5173 ${env.FRONTEND_IMAGE} || echo 'Container may already be running'"
                 }
             }
         }

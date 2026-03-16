@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'docker-agent-python' }
+    agent { label 'ec2-fleet' }
     stages {
         stage('Build Docker Image') {
             steps {
